@@ -1,14 +1,21 @@
 import Link from "next/link";
 
+interface Post {
+    id: number;
+    userId: number;
+    title: string;
+    body: string;
+}
+
 export default async function PostsPage() {
     const limit = 10;
     const res = await fetch(`${process.env.POST_API_URL}/posts?_start=0&_limit=${limit}`);
-    const data = await res.json();
+    const data: Post[] = await res.json();
     return (
         <div className="text-center pt-16 px-5">
             <h1 className="text-4xl md:text-5xl font-bold mb-7">All posts</h1>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {await Promise.all(data.map(async (post: any) => {
+                {await Promise.all(data.map(async (post: Post) => {
                     const userRes = await fetch(
                         `${process.env.POST_API_URL}/users/${post.userId}`
                     );

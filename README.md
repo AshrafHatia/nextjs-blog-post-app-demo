@@ -55,7 +55,6 @@ While building this project, I learned the following:
 1. **Next.js Basics**:
    - Setting up a Next.js application.
    - Understanding server-side rendering (SSR) and static site generation (SSG).
-   - Using `getStaticProps` and `getStaticPaths` for dynamic routing.
 
 2. **Environment Variables**:
    - Configuring environment variables using `process.env`.
