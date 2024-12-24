@@ -1,17 +1,18 @@
 import Link from "next/link";
 
-export default async function UserPage({
-    params,
-}: {
-    params: { userId: string };
-}) {
+
+export type paramsType = Promise<{ userId: string }>;
+
+export default async function UsersPage(props: { params: paramsType }) {
+
+    const { userId } = await props.params;
 
     const userRes = await fetch(
-        `${process.env.POST_API_URL}/users/${params.userId}`
+        `${process.env.POST_API_URL}/users/${userId}`
     );
     const user = await userRes.json();
 
-    const postsRes = await fetch(`${process.env.POST_API_URL}/posts?userId=${params.userId}`);
+    const postsRes = await fetch(`${process.env.POST_API_URL}/posts?userId=${userId}`);
     const posts = await postsRes.json();
 
     type Post = {

@@ -1,10 +1,12 @@
-export default async function PostPage({
-  params,
-}: {
-  params: { postId: string };
-}) {
+
+export type paramsType = Promise<{ postId: string }>;
+
+export default async function PostPage(props: { params: paramsType }) {
+
+  const { postId } = await props.params;
+
   const res = await fetch(
-    `${process.env.POST_API_URL}/posts/${params.postId}`
+    `${process.env.POST_API_URL}/posts/${postId}`
   );
   const postData = await res.json();
 
