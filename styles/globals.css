@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DaisyUI */
+@import 'daisyui/dist/full.css';
+
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Custom Colors */
+:root {
+  --tarawera-50: #edfefe;
+  --tarawera-100: #d1fbfc;
+  --tarawera-200: #a8f4f9;
+  --tarawera-300: #6ce9f4;
+  --tarawera-400: #29d5e7;
+  --tarawera-500: #0db8cd;
+  --tarawera-600: #0e93ac;
+  --tarawera-700: #12768c;
+  --tarawera-800: #185f72;
+  --tarawera-900: #195060;
+  --tarawera-950: #0b3948;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}

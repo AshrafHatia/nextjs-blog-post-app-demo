@@ -1,4 +1,3 @@
-
 export type paramsType = Promise<{ postId: string }>;
 
 export default async function PostPage(props: { params: paramsType }) {
