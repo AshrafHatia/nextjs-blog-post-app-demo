@@ -1,7 +1,7 @@
-```markdown
 # Next.js Blog Post Application
 
-A simple blog post application built with Next.js, using the [JSONPlaceholder API](https://jsonplaceholder.typicode.com) as a data source. This project demonstrates the fundamentals of Next.js, including server-side rendering, dynamic routing, and API integration.
+A simple blog post application built with Next.js, using the [JSONPlaceholder API](https://jsonplaceholder.typicode.com) as a data source. 
+This project demonstrates the fundamentals of Next.js, including server-side rendering, dynamic routing, and API integration.
 
 ## Features
 
@@ -14,8 +14,8 @@ A simple blog post application built with Next.js, using the [JSONPlaceholder AP
 ## Tech Stack
 
 - **Next.js**: Framework for server-side rendering and frontend development.
-- **TailwindCSS**: For styling the application.
-- **JSONPlaceholder API**: Free online REST API used for demo data.
+- **TailwindCSS**: This is for styling the application.
+- **JSONPlaceholder API**: Free online REST API for demo data.
 
 ## Setup and Installation
 
@@ -25,6 +25,7 @@ A simple blog post application built with Next.js, using the [JSONPlaceholder AP
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd nextjs-blog-post-app
    ```
@@ -35,7 +36,7 @@ A simple blog post application built with Next.js, using the [JSONPlaceholder AP
    ```
 
 4. Set up environment variables:
-   - Create a `.env.local` file in the root directory.
+   - Create a `.env` file in the root directory.
    - Add the following environment variable:
      ```
      POST_API_URL=https://jsonplaceholder.typicode.com
@@ -89,10 +90,11 @@ While building this project, I learned the following:
 
 ## Demo
 
+[DEMO](https://nextjs-blog-post-app-demo.vercel.app/)
 
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This open-source project is available under the [MIT License](LICENSE).
 
 ```
